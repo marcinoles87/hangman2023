@@ -1,10 +1,11 @@
 import React from 'react-dom'
 import './App.css';
+import Header from './components/Header.js';
 
 function App() {
   return (
     <div className="App">
-       <h1>Hangman 2023 </h1>
+       <Header></Header>
     </div>
   );
 }
