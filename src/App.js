@@ -1,4 +1,4 @@
-import React , {useState} from 'react-dom'
+import React , {useState} from 'react'
 import './App.css';
 import Header from './components/Header.js';
 import Figure from './components/Figure.js';
@@ -17,6 +17,8 @@ const wrongLetter = [];
 function App() {
 
   const [playable , setPlayable] = useState(true);
+  const [correctLetter , setCorrectletters] = useState([]);
+  const [wrongLetter , setWrongLetters] = useState([]);
 
 
   return (
