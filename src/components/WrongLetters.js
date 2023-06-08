@@ -2,7 +2,9 @@ import React from 'react'
 
 function WrongLetters() {
   return (
-    <div>WrongLetters</div>
+    <div className='wrongletters-container'>
+        <div className='wrong-letters'></div>
+        </div>
   )
 }
 
