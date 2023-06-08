@@ -1,9 +1,11 @@
 import React from 'react'
 
-function WrongLetters() {
+function WrongLetters({wrongLetter}) {
   return (
     <div className='wrongletters-container'>
-        <div className='wrong-letters'></div>
+        <div className='wrong-letters'>
+          {wrongLetter}
+        </div>
         </div>
   )
 }
