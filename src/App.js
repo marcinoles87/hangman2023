@@ -6,7 +6,7 @@ import WrongLetters from './components/WrongLetters.js';
 import Word from './components/Word';
 
 
-const words = ['application' , 'programing' , 'wizard' , 'polska'] ;
+const words = ['real' , 'hutnik' , 'marcel' , 'polska'] ;
 
 let selectedWord = words[Math.floor(Math.random() * words.length)]
 let playable = true;
@@ -19,6 +19,7 @@ function App() {
   const [playable , setPlayable] = useState(true);
   const [correctLetters , setCorrectletters] = useState([]);
   const [wrongLetter , setWrongLetters] = useState([]);
+  const [showNotification , setShowNotification] = useState(false)
 
 
   useEffect( () => {
