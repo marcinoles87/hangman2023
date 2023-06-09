@@ -26,18 +26,30 @@ function App() {
     const handleKeydown = event => {
       const {key , keyCode} = event;
        if( playable && keyCode >= 65 && keyCode <= 95 ) {
-          const letter = event.key.toLowerCase();
+          const letter = key.toLowerCase();
 
           if(selectedWord.includes(letter)){
             if(!correctLetter.includes(letter)){
               setCorrectletters(
                 currentLetter => [...currentLetter,letter]
-              )
+              );
+            } else {
+              //notification
+            }
+
+          } else {
+            if(!wrongLetter.includes(letter)){
+              setWrongLetters(
+                wrongLetter => [...wrongLetter , letter]
+              );
             }
           }
        }
-    }
-  });
+    } 
+    window.addEventListener('keydown', handleKeydown);
+
+    return () => window.removeEventListener('keydown', handleKeydown);
+  } , [correctLetter , wrongLetter , playable] );
 
   return (
     <div className="App">
