@@ -56,7 +56,7 @@ function App() {
        <Header></Header>
        <div className='game-container'>
        
-          <Figure wrongLetters={wrongLetter}></Figure>
+          <Figure wrongLetter={wrongLetter}></Figure>
           <WrongLetters
            wrongLetter={wrongLetter}
           ></WrongLetters>
