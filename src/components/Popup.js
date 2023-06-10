@@ -1,7 +1,15 @@
 import React from 'react'
 
-function Popup() {
+function Popup({correctLetters, wrongLetter , selectedWord}) {
+    console.log(correctLetters.length)
+    console.log(wrongLetter)
+    console.log(selectedWord.length)
+
+
+
   return (
+
+    
     <div className='popup-container'>
         <div className='popup'>
             <h2 id='final-message'></h2>
