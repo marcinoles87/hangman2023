@@ -1,11 +1,9 @@
 import React from 'react'
+import Notification from './Notification';
 
 function Figure({wrongLetter}) {
   const errors = wrongLetter.length;
   
-  if(errors > 6){
-    alert('niestety przegrales')
-  }
 
   return (
     <svg height="250" width="200" className="figure-container">

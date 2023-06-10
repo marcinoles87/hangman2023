@@ -4,7 +4,9 @@ import Header from './components/Header.js';
 import Figure from './components/Figure.js';
 import WrongLetters from './components/WrongLetters.js';
 import Word from './components/Word';
-
+import {showNotification as show} from './helpers/helpers';
+import Notification from './components/Notification';
+import Popup from './components/Popup';
 
 const words = ['real' , 'hutnik' , 'marcel' , 'polska'] ;
 
@@ -17,9 +19,7 @@ const wrongLetter = [];
 console.log(correctLetter.length)
 console.log(selectedWord.length)
 
-if(selectedWord.length === correctLetter.length){
-  alert('udalo sie - wygrales')
-}
+
 
 function App() {
 
@@ -27,6 +27,7 @@ function App() {
   const [correctLetters , setCorrectletters] = useState([]);
   const [wrongLetter , setWrongLetters] = useState([]);
   const [showNotification , setShowNotification] = useState(false)
+
 
 
   useEffect( () => {
@@ -42,7 +43,7 @@ function App() {
                 currentLetter => [...currentLetter,letter]
               );
             } else {
-              //notification
+              show(setShowNotification)
             }
 
           } else {
@@ -50,6 +51,8 @@ function App() {
               setWrongLetters(
                 wrongLetter => [...wrongLetter , letter]
               );
+            }else {
+              show(setShowNotification)
             }
           }
        }
@@ -72,6 +75,8 @@ function App() {
           selectedWord={selectedWord} 
           correctLetters={correctLetters}
           ></Word>
+          <Popup></Popup>
+          <Notification></Notification>
        </div>
 
     </div>
