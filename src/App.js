@@ -72,7 +72,7 @@ function App() {
           <Word selectedWord={selectedWord} correctLetters={correctLetters}></Word>   
        </div>
 
-       <Popup></Popup>
+       <Popup correctLetters={correctLetters} wrongLetter={wrongLetter} selectedWord={selectedWord}></Popup>
         <Notification showNotification={showNotification}></Notification>
     </div>
   );
