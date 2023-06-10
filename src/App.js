@@ -68,17 +68,12 @@ function App() {
        <div className='game-container'>
        
           <Figure wrongLetter={wrongLetter}></Figure>
-          <WrongLetters
-           wrongLetter={wrongLetter}
-          ></WrongLetters>
-          <Word
-          selectedWord={selectedWord} 
-          correctLetters={correctLetters}
-          ></Word>
-          <Popup></Popup>
-          <Notification></Notification>
+          <WrongLetters wrongLetter={wrongLetter}></WrongLetters>
+          <Word selectedWord={selectedWord} correctLetters={correctLetters}></Word>   
        </div>
 
+       <Popup></Popup>
+        <Notification showNotification={showNotification}></Notification>
     </div>
   );
 }

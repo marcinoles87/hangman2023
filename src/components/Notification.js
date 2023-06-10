@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Notification() {
+function Notification({showNotification}) {
   return (
-    <div className='notification-container' id='notification-container'>Notification :
+    <div className={showNotification ? 'show' : ''} id='notification-container'>Notification :
         <p>you have already use this letter</p>
     </div>
   )
