@@ -1,8 +1,7 @@
 import React from 'react'
 
 function Word({ selectedWord , correctLetters}) {
-  console.log(selectedWord)
-  console.log(correctLetters)
+ 
   return (
     <div className='word-container'>
         <div className='word'>

@@ -14,6 +14,13 @@ let playable = true;
 const correctLetter = [];
 const wrongLetter = [];
 
+console.log(correctLetter.length)
+console.log(selectedWord.length)
+
+if(selectedWord.length === correctLetter.length){
+  alert('udalo sie - wygrales')
+}
+
 function App() {
 
   const [playable , setPlayable] = useState(true);

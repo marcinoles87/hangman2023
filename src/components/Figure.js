@@ -2,7 +2,10 @@ import React from 'react'
 
 function Figure({wrongLetter}) {
   const errors = wrongLetter.length;
-  console.log(errors)
+  
+  if(errors > 6){
+    alert('niestety przegrales')
+  }
 
   return (
     <svg height="250" width="200" className="figure-container">
