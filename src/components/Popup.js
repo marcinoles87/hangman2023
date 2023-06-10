@@ -20,7 +20,9 @@ function Popup({correctLetters, wrongLetter , selectedWord , setPlayable}) {
   }
 
   useEffect( () =>{
-    setPlayable(playable)})
+    setPlayable(playable);
+    
+  })
   
 
   return (
@@ -30,7 +32,7 @@ function Popup({correctLetters, wrongLetter , selectedWord , setPlayable}) {
         <div className='popup'>
             <h2>{finalMessage}</h2>
             <h3>{finalMessageRevalWord}</h3>
-            <button>Play again</button>
+            <button onClick={playAgain}>Play again</button>
         </div>
         </div>
   )
