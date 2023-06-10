@@ -1,20 +1,21 @@
 import React from 'react'
 
-function Popup({correctLetters, wrongLetter , selectedWord}) {
+function Popup({correctLetters, wrongLetter , selectedWord , setPlayable}) {
     console.log(correctLetters.length)
     console.log(wrongLetter)
     console.log(selectedWord.length)
 
-
+  let finalMessage = '';
+  let finalMessageRevalWord = '';
 
   return (
 
     
     <div className='popup-container'>
         <div className='popup'>
-            <h2 id='final-message'></h2>
-            <h3 id='final-message-word'></h3>
-            <button id='play-button'>Play again</button>
+            <h2>{finalMessage}</h2>
+            <h3>{finalMessageRevalWord}</h3>
+            <button>Play again</button>
         </div>
         </div>
   )
