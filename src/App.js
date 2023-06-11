@@ -27,7 +27,8 @@ function App() {
   const [correctLetters , setCorrectletters] = useState([]);
   const [wrongLetter , setWrongLetters] = useState([]);
   const [showNotification , setShowNotification] = useState(false)
-  const [playAgain , setPlayAgain] = useState(false);
+  
+
 
 
 
@@ -53,7 +54,8 @@ function App() {
                 wrongLetter => [...wrongLetter , letter]
               );
             }else {
-              show(setShowNotification)
+              show(setShowNotification);
+
             }
           }
        }
@@ -62,6 +64,16 @@ function App() {
 
     return () => window.removeEventListener('keydown', handleKeydown);
   } , [correctLetter , wrongLetter , playable] );
+
+  function playAgain() {
+    setPlayable(true);
+    setCorrectletters([])
+    setWrongLetters([])
+
+    const random = Math.floor(Math.random() * words.length);
+    selectedWord = words[random]
+
+  }
 
   return (
     <div className="App">
