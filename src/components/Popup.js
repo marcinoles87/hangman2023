@@ -1,7 +1,7 @@
 import React , {useEffect} from 'react'
 import { checkWin } from '../helpers/helpers'
 
-function Popup({correctLetters, wrongLetter , selectedWord , setPlayable}) {
+function Popup({correctLetters, wrongLetter , selectedWord , setPlayable , playAgain}) {
     console.log(correctLetters)
     console.log(wrongLetter)
     console.log(setPlayable)
